@@ -1,6 +1,6 @@
 :root {
     --bg-main: #090A0B;
-    --bg-secondary: #1B1E22;
+    --bg-secondary: #121417;
     --primary: #CA0201;
     --btn-hover: #b90000;
     --text-main: #F3F5F7;
@@ -46,7 +46,7 @@
 }
 
 .navbar #request-quote:hover {
-
+    background-color: var(--btn-hover);
 }
 
 .navbar-toggler {
@@ -130,6 +130,14 @@ body {
     color: var(--text-main);
 }
 
+.btn {
+    --bs-btn-color: var(--text-main);
+    --bs-btn-bg: var(--primary);
+    --bs-btn-border-color: none;
+    --bs-btn-hover-bg: var(--btn-hover);
+    --bs-btn-active-bg: var(--btn-hover);
+}
+
 /* styles for anything smaller than medium screens */
 @media (max-width: 767px) {
     .dropdown-menu {
@@ -140,6 +148,10 @@ body {
 
     .navbar #request-quote {
         margin-bottom: 0.5rem;
+    }
+
+    .nav-item {
+        margin-left: 0.5rem;
     }
 
 }
