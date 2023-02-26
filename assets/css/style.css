@@ -136,6 +136,12 @@ body {
     --bs-btn-border-color: none;
     --bs-btn-hover-bg: var(--btn-hover);
     --bs-btn-active-bg: var(--btn-hover);
+    border-radius: 0.367rem;
+}
+
+.photo {
+    border: 1px solid var(--bg-secondary);
+    border-radius: 0.575rem;
 }
 
 /* styles for anything smaller than medium screens */
