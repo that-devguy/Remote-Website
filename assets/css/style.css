@@ -144,6 +144,10 @@ body {
     border-radius: 0.575rem;
 }
 
+.card {
+    padding: 0 !important;
+}
+
 /* styles for anything smaller than medium screens */
 @media (max-width: 767px) {
     .dropdown-menu {
