@@ -130,6 +130,7 @@ body {
     color: var(--text-main);
 }
 
+
 .btn {
     --bs-btn-color: var(--text-main);
     --bs-btn-bg: var(--primary);
@@ -146,10 +147,31 @@ body {
 
 .card {
     padding: 0 !important;
+    --bs-card-bg: var(--bg-secondary);
+    --bs-card-border-color: var(--bg-secondary);
+}
+
+.card-text {
+    color: var(--text-secondary);
+}
+
+.card-text.truncate {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3; /* adjust the number of lines as needed */
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+/* styles for only medium screen sizes */
+@media (min-width: 768px) and (max-width: 991px) {
+    h5 {
+        font-size: 1.1rem;
+    }
 }
 
 /* styles for anything smaller than medium screens */
-@media (max-width: 767px) {
+@media (max-width: 767px ) {
     .dropdown-menu {
         --bs-dropdown-bg: var(--bg-secondary);
         --bs-dropdown-link-active-bg: var(--bg-secondary);
