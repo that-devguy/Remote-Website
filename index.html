@@ -56,24 +56,28 @@
         </div>
     </div>
     <!-- main -->
-    <div class="container col-xxl-8 px-4 py-5">
+    <div class="container col-xxl-8 px-4 pb-5">
         <!-- about us -->
         <div class="row align-items-md-center align-items-lg-start g5 py-5">
-            <div class="col-md-6 col-11"><img class="col-12 mb-3 photo" src="/assets/images/elementor-placeholder-image.png" alt="place-holder"></div>
-            <div class="col-md-6">
-                <h2 class="display-5 fw-bold 1h-1 mb-3">About Us</h2>
+            <div class="d-none d-lg-flex col-md-6 col-11"><img class="col-12 photo" src="/assets/images/elementor-placeholder-image.png" alt="place-holder"></div>
+            <div class="col-md-10 col-lg-6">
+                <h2 class="display-5 fw-bold 1h-1">About Us</h2>
+                <div class="red-divider mb-3"></div>
                 <p class="lead mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, repellendus. Perferendis vel quod optio pariatur ipsum aspernatur hic. Itaque alias beatae reprehenderit minus, optio libero cumque praesentium unde ipsam corrupti.</p>
             </div>
+            <div class="d-lg-none col-12 col-md-8"><img class="col-12 photo" src="/assets/images/elementor-placeholder-image.png" alt="place-holder"></div>
         </div>
         <!-- services -->
-        <div class="row align-items-center g5 pb-3">
-            <div class="col-md-12">
-                <h2 class="display-4 fw-bold 1h-1 mb-3 text-center">Services</h2>
+        <div class="row align-items-center g5">
+            <div class="col-md-12 mb-3">
+                <h2 class="display-4 fw-bold 1h-1 text-md-center">Services</h2>
+                <div class="red-divider mb-3 mx-md-auto"></div>
+                <p class="lead mb-3 text-md-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, repellendus. Perferendis vel quod optio pariatur ipsum aspernatur hic. Itaque alias beatae reprehenderit minus, optio libero cumque praesentium unde ipsam corrupti.</p>
             </div>
         </div>
-        <div class="services row align-items-center g5 gap-3 justify-content-center">
+        <div class="services row align-items-center g5 gap-3 mb-lg-4 justify-content-center">
             <!-- service 1 -->
-            <div class="card col-md col-10">
+            <div class="card col-md col-11">
                 <img src="/assets/images/elementor-placeholder-image.png" class="card-img-top" alt="place-holder">
                 <div class="card-body">
                     <h5 class="card-title">Design</h5>
@@ -82,7 +86,7 @@
                 </div>
             </div>
             <!-- service 2 -->
-            <div class="card col-md col-10">
+            <div class="card col-md col-11">
                 <img src="/assets/images/elementor-placeholder-image.png" class="card-img-top" alt="place-holder">
                 <div class="card-body">
                     <h5 class="card-title">Rapid Prototyping</h5>
@@ -91,7 +95,7 @@
                 </div>
             </div>
             <!-- service 3 -->
-            <div class="card col-md col-10">
+            <div class="card col-md col-11">
                 <img src="/assets/images/elementor-placeholder-image.png" class="card-img-top" alt="place-holder">
                 <div class="card-body">
                     <h5 class="card-title">Product Development</h5>
@@ -101,20 +105,72 @@
             </div>
         </div>
         <!-- request quote -->
-        <div class="row align-items-md-center align-items-lg-start g5 py-5">
-            <div class="col-md-6">
-                <h2 class="display-5 fw-bold 1h-1 mb-3">Request a Quote</h2>
+        <div class="row align-items-md-start g5 py-5">
+            <div class="col-12 col-md-10 col-lg-6 align-items-start">
+                <h2 class="display-5 fw-bold 1h-1">Request a Quote</h2>
+                <div class="red-divider mb-3"></div>
                 <p class="lead mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, repellendus. Perferendis vel quod optio pariatur ipsum aspernatur hic. Itaque alias beatae reprehenderit minus, optio libero cumque praesentium unde ipsam corrupti.</p>
             </div>
-            <div class="col-md-6 col-11">
-                <div id="form-container" class="row g-3">
-                    <div class="col">
-                      <input type="text" class="form-control" placeholder="First name" aria-label="First name">
+                <div class="col-lg-6 col-11 py-3 p-md-3 mx-md-0 mx-auto">
+                    <form id="quote-form" action="#" method="post">
+                    <div id="form-container" class="row g-3 px-3">
+                        <div class="col-md-6">
+                            <label for="full-name" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="full-name" placeholder="John Doe">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="email" class="form-control" id="email" placeholder="name@example.com">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="phone" class="form-label">Phone Number</label>
+                            <input type="tel" class="form-control" id="phone" placeholder="(123) 456-7890">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="company" class="form-label">Company</label>
+                            <input type="text" class="form-control" id="company" placeholder="Acme Inc.">
+                        </div>
+                        <div class="col-md-12">
+                            <label for="select-services" class="form-label">Select Services</label>
+                            <select class="form-select" id="select-services">
+                                <option selected disabled>Select an option...</option>
+                                <option value="concept">Design Needs</option>
+                                <option value="prototype">Additive Manufaturing</option>
+                                <option value="ideation">Design Needs & Additive Manufacturing</option>
+                            </select>
+                        </div>
+                        <div class="col-md-12 design-needs-group">
+                            <label for="degree-of-development" class="form-label">Degree of Development</label>
+                            <select class="form-select" id="degree-of-development">
+                                <option selected disabled>Select an option...</option>
+                                <option value="concept">Concept</option>
+                                <option value="prototype">Prototype</option>
+                                <option value="ideation">Ideation</option>
+                                <option value="production-ready">Production Ready</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6 production-ready-group">
+                            <label for="target-cost" class="form-label">Target Cost</label>
+                            <input type="text" class="form-control" id="target-cost">
+                        </div>
+                        <div class="col-md-6 production-ready-group">
+                            <label for="estimated-annual-volume" class="form-label">Estimated Annual Volume</label>
+                            <input type="text" class="form-control" id="estimated-annual-volume">
+                        </div>
+                        <div class="col-md-6 production-ready-group">
+                            <label for="launch-date" class="form-label">Launch Date</label>
+                            <input type="date" class="form-control" id="launch-date">
+                        </div>
+                        <div class="col-md-12">
+                            <label for="additional-info" class="form-label">Additional Information</label>
+                            <textarea class="form-control" id="additional-info" rows="5"></textarea>
+                        </div>
+                        <div class="col-md-12 mb-3 text-center">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
                     </div>
-                    <div class="col">
-                      <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
-                    </div>
-                  </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>

@@ -163,6 +163,23 @@ body {
     text-overflow: ellipsis;
   }
 
+#form-container {
+    background-color: var(--bg-secondary);
+    border-radius: 0.575rem;
+}
+
+.form-label {
+    color: var(--text-secondary);
+    font-size: .9rem;
+}
+
+
+.red-divider {
+    height: 2px;
+    width: 50px;
+    background-color: var(--primary);
+}
+
 /* styles for only medium screen sizes */
 @media (min-width: 768px) and (max-width: 991px) {
     h5 {
