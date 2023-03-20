@@ -28,7 +28,7 @@
                         <a href="#" class="nav-link">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">About Us</a>
+                        <a href="#about-us-section" class="nav-link">About Us</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
@@ -39,7 +39,7 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link"><button id="request-quote">Request Quote</button></a>
+                        <a href="#request-quote-section" class="nav-link"><button id="request-quote">Request Quote</button></a>
                     </li>
                 </ul>
             </div>
@@ -51,14 +51,43 @@
             <div class="col-md-6">
                 <h1 class="display-3 fw-bold 1h-1 mb-3">High Quality Product Design & Prototyping</h1>
                 <p class="lead mb-4">Whether you have an idea in your head, a napkin sketch, or a part model/assembly, I can make you a functioning prototype, so you can see, touch, and interact with your idea.</p>
-                <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Get a Quote</button>
+                <a href="#request-quote-section"><button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Get a Quote</button></a>
             </div>
         </div>
     </div>
     <!-- main -->
     <div class="container col-xxl-8 px-4 pb-5">
+        <!-- how it works -->
+        <div id="how-it-works-section" class="row align-items-md-center align-items-lg-start g5 pt-5">
+            <div class="col-md-10 col-lg-12">
+                <h2 class="display-5 fw-bold 1h-1">
+                    Bringing Your Idea to Life<br class="d-none d-sm-block">
+                    Has Never Been So Easy!
+                </h2>
+                <div class="red-divider mb-3"></div>
+                <p class="lead mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, repellendus. Perferendis vel quod optio pariatur ipsum aspernatur hic. Itaque alias beatae reprehenderit minus, optio libero cumque praesentium unde ipsam corrupti.</p>
+            </div>
+            <div class="row flex-wrap mx-0 mb-5">
+                <div class="row flex-lg-column col-lg-3 mx-0">
+                    <img class="col-10 col-sm-6 col-lg-12 mx-auto mt-4" src="./assets/images/idea.png" alt="">
+                    <p class="text-center text-md-start text-lg-center my-auto col-12 col-md-6 col-lg-12 mt-lg-4 mx-auto">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+                <div class="row flex-lg-column col-lg-3 mx-0">
+                    <img class="col-10 col-sm-6 col-lg-12 mx-auto mt-4" src="./assets/images/connect.png" alt="">
+                    <p class="text-center text-md-start text-lg-center my-auto col-12 col-md-6 col-lg-12 mt-lg-4 mx-auto">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+                <div class="row flex-lg-column col-lg-3 mx-0">
+                    <img class="col-10 col-sm-6 col-lg-12 mx-auto mt-4" src="./assets/images/review.png" alt="">
+                    <p class="text-center text-md-start text-lg-center my-auto col-12 col-md-6 col-lg-12 mt-lg-4 mx-auto">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+                <div class="row flex-lg-column col-lg-3 mx-0">
+                    <img class="col-10 col-sm-6 col-lg-12 mx-auto mt-4" src="./assets/images/delivery.png" alt="">
+                    <p class="text-center text-md-start text-lg-center my-auto col-12 col-md-6 col-lg-12 mt-lg-4 mx-auto">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+            </div>
+        </div>
         <!-- about us -->
-        <div class="row align-items-md-center align-items-lg-start g5 py-5">
+        <div id="about-us-section" class="row align-items-md-center align-items-lg-start g5 pb-5">
             <div class="d-none d-lg-flex col-md-6 col-11"><img class="col-12 photo" src="/assets/images/elementor-placeholder-image.png" alt="place-holder"></div>
             <div class="col-md-10 col-lg-6">
                 <h2 class="display-5 fw-bold 1h-1">About Us</h2>
@@ -105,15 +134,15 @@
             </div>
         </div>
         <!-- request quote -->
-        <div class="row align-items-md-start g5 py-5">
+        <div id="request-quote-section" class="row align-items-md-start g5">
             <div class="col-12 col-md-10 col-lg-6 align-items-start">
                 <h2 class="display-5 fw-bold 1h-1">Request a Quote</h2>
                 <div class="red-divider mb-3"></div>
                 <p class="lead mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, repellendus. Perferendis vel quod optio pariatur ipsum aspernatur hic. Itaque alias beatae reprehenderit minus, optio libero cumque praesentium unde ipsam corrupti.</p>
             </div>
-                <div class="col-lg-6 col-11 py-3 p-md-3 mx-md-0 mx-auto">
+                <div class="col-lg-6 col-11 py-3 px-0 p-md-3 mx-md-0 mx-auto">
                     <form id="quote-form" action="#" method="post">
-                    <div id="form-container" class="row g-3 px-3">
+                    <div id="form-container" class="row g-3 px-3 mt-2">
                         <div class="col-md-6">
                             <label for="full-name" class="form-label">Full Name</label>
                             <input type="text" class="form-control" id="full-name" placeholder="John Doe">
@@ -135,11 +164,11 @@
                             <select class="form-select" id="select-services">
                                 <option selected disabled>Select an option...</option>
                                 <option value="concept">Design Needs</option>
-                                <option value="prototype">Additive Manufaturing</option>
+                                <option value="prototype">Additive Manufacturing</option>
                                 <option value="ideation">Design Needs & Additive Manufacturing</option>
                             </select>
                         </div>
-                        <div class="col-md-12 design-needs-group">
+                        <div class="col-md-12 design-needs-group d-none">
                             <label for="degree-of-development" class="form-label">Degree of Development</label>
                             <select class="form-select" id="degree-of-development">
                                 <option selected disabled>Select an option...</option>
@@ -149,23 +178,44 @@
                                 <option value="production-ready">Production Ready</option>
                             </select>
                         </div>
-                        <div class="col-md-6 production-ready-group">
+                        <div class="col-md-6 production-ready-group d-none">
                             <label for="target-cost" class="form-label">Target Cost</label>
                             <input type="text" class="form-control" id="target-cost">
                         </div>
-                        <div class="col-md-6 production-ready-group">
+                        <div class="col-md-6 production-ready-group d-none">
                             <label for="estimated-annual-volume" class="form-label">Estimated Annual Volume</label>
                             <input type="text" class="form-control" id="estimated-annual-volume">
                         </div>
-                        <div class="col-md-6 production-ready-group">
+                        <div class="col-md-6 production-ready-group d-none">
                             <label for="launch-date" class="form-label">Launch Date</label>
                             <input type="date" class="form-control" id="launch-date">
+                        </div>
+                        <div class="col-md-12 additive-manufacturing-group d-none">
+                            <label for="degree-of-development" class="form-label">Material</label>
+                            <select class="form-select" id="degree-of-development">
+                                <option selected disabled>Select an option...</option>
+                                <option value="mat-1">Mat 1</option>
+                                <option value="mat-2">Mat 2</option>
+                                <option value="mat-3">Mat 3</option>
+                                <option value="mat-4">Mat 4</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6 additive-manufacturing-group">
+                            <label for="quantity" class="form-label">Quantity per Part</label>
+                            <input type="number" min="0" class="form-control" id="quantity">
                         </div>
                         <div class="col-md-12">
                             <label for="additional-info" class="form-label">Additional Information</label>
                             <textarea class="form-control" id="additional-info" rows="5"></textarea>
                         </div>
-                        <div class="col-md-12 mb-3 text-center">
+                        <div class="col-md-12">
+                            <label for="file-upload" class="form-label">Project Files</label>
+                            <input type="file" min="0" class="form-control" id="file-upload">
+                        </div>
+                        <div class="col-md-12">
+                            <p id="upload-msg" class="col-11">At Remote, we understand that protecting your intellectual property is essential to the success of your invention. Therefore, we want to assure you that any files you upload are treated with the utmost confidentiality. Your ideas are safe with us, and we are committed to providing you with the highest level of privacy.</p>
+                        </div>
+                        <div class="col-md-12 mb-4 mt-0 text-center">
                             <button type="submit" class="btn btn-primary">Submit</button>
                         </div>
                     </div>
