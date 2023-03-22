@@ -8,7 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link href="/assets/css/style.css" rel="stylesheet">
     <!-- for testing breakpoints -->
-    <link href="/assets/css/breakpoint.css" rel="stylesheet">
+    <!-- <link href="/assets/css/breakpoint.css" rel="stylesheet"> -->
     <title>Remote - Design, Addaptive Manufacturing, and Prototyping</title>
 </head>
 <body>
@@ -144,31 +144,31 @@
                     <form id="quote-form" action="#" method="post">
                     <div id="form-container" class="row g-3 px-3 mt-2">
                         <div class="col-md-6">
-                            <label for="full-name" class="form-label">Full Name</label>
-                            <input type="text" class="form-control" id="full-name" placeholder="John Doe">
+                            <label for="full-name" class="form-label">Full Name *</label>
+                            <input type="text" class="form-control" id="full-name" placeholder="John Doe" required>
                         </div>
                         <div class="col-md-6">
-                            <label for="email" class="form-label">Email Address</label>
-                            <input type="email" class="form-control" id="email" placeholder="name@example.com">
+                            <label for="email" class="form-label">Email Address *</label>
+                            <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
                         </div>
                         <div class="col-md-6">
-                            <label for="phone" class="form-label">Phone Number</label>
-                            <input type="tel" class="form-control" id="phone" placeholder="(123) 456-7890">
+                            <label for="phone" class="form-label">Phone Number *</label>
+                            <input type="tel" class="form-control" id="phone" placeholder="(123) 456-7890" required>
                         </div>
                         <div class="col-md-6">
                             <label for="company" class="form-label">Company</label>
                             <input type="text" class="form-control" id="company" placeholder="Acme Inc.">
                         </div>
                         <div class="col-md-12">
-                            <label for="select-services" class="form-label">Select Services</label>
-                            <select class="form-select" id="select-services">
+                            <label for="select-services" class="form-label">Select Services *</label>
+                            <select class="form-select" id="select-services" required>
                                 <option selected disabled>Select an option...</option>
-                                <option value="concept">Design Needs</option>
-                                <option value="prototype">Additive Manufacturing</option>
-                                <option value="ideation">Design Needs & Additive Manufacturing</option>
+                                <option value="design-needs">Design Needs</option>
+                                <option value="additive-manufacturing">Additive Manufacturing</option>
+                                <option value="both">Design Needs & Additive Manufacturing</option>
                             </select>
                         </div>
-                        <div class="col-md-12 design-needs-group">
+                        <div class="col-md-12 d-none" id="design-needs-group">
                             <label for="degree-of-development" class="form-label">Degree of Development</label>
                             <select class="form-select" id="degree-of-development">
                                 <option selected disabled>Select an option...</option>
@@ -178,19 +178,19 @@
                                 <option value="production-ready">Production Ready</option>
                             </select>
                         </div>
-                        <div class="col-md-6 production-ready-group">
+                        <div class="col-md-6 d-none" id="target-cost-div">
                             <label for="target-cost" class="form-label">Target Cost</label>
                             <input type="text" class="form-control" id="target-cost">
                         </div>
-                        <div class="col-md-6 production-ready-group">
+                        <div class="col-md-6 d-none" id="annual-vol-div">
                             <label for="estimated-annual-volume" class="form-label">Estimated Annual Volume</label>
                             <input type="text" class="form-control" id="estimated-annual-volume">
                         </div>
-                        <div class="col-md-6 production-ready-group">
+                        <div class="col-md-6 d-none" id="launch-div">
                             <label for="launch-date" class="form-label">Launch Date</label>
                             <input type="date" class="form-control" id="launch-date">
                         </div>
-                        <div class="col-md-12 additive-manufacturing-group">
+                        <div class="col-md-12 additive-manufacturing-group d-none">
                             <label for="degree-of-development" class="form-label">Material</label>
                             <select class="form-select" id="degree-of-development">
                                 <option selected disabled>Select an option...</option>
@@ -200,7 +200,7 @@
                                 <option value="mat-4">Mat 4</option>
                             </select>
                         </div>
-                        <div class="col-md-6 additive-manufacturing-group">
+                        <div class="col-md-6 additive-manufacturing-group d-none">
                             <label for="quantity" class="form-label">Quantity per Part</label>
                             <input type="number" min="0" class="form-control" id="quantity">
                         </div>
@@ -225,5 +225,6 @@
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="./assets/js/script.js"></script>
 </body>
 </html>
