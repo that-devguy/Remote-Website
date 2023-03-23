@@ -92,7 +92,8 @@
             <div class="col-md-10 col-lg-6">
                 <h2 class="display-5 fw-bold 1h-1">About Us</h2>
                 <div class="red-divider mb-3"></div>
-                <p class="lead mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, repellendus. Perferendis vel quod optio pariatur ipsum aspernatur hic. Itaque alias beatae reprehenderit minus, optio libero cumque praesentium unde ipsam corrupti.</p>
+                <!-- Edit about us -->
+                <p class="lead mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, veniam! Recusandae harum quos sit excepturi officiis at. Sunt, voluptatibus alias qui quam, culpa quis eveniet quod at dolores facere repellat.</p>
             </div>
             <div class="d-lg-none col-12 col-md-8"><img class="col-12 photo" src="/assets/images/elementor-placeholder-image.png" alt="place-holder"></div>
         </div>
@@ -180,7 +181,7 @@
                         </div>
                         <div class="col-md-6 d-none" id="target-cost-div">
                             <label for="target-cost" class="form-label">Target Cost</label>
-                            <input type="text" class="form-control" id="target-cost">
+                            <input type="number" class="form-control" id="target-cost" step="0.01" min="0" value="0.00">
                         </div>
                         <div class="col-md-6 d-none" id="annual-vol-div">
                             <label for="estimated-annual-volume" class="form-label">Estimated Annual Volume</label>
@@ -190,7 +191,7 @@
                             <label for="launch-date" class="form-label">Launch Date</label>
                             <input type="date" class="form-control" id="launch-date">
                         </div>
-                        <div class="col-md-12 additive-manufacturing-group d-none">
+                        <div class="col-md-12 d-none" id="materials-div">
                             <label for="degree-of-development" class="form-label">Material</label>
                             <select class="form-select" id="degree-of-development">
                                 <option selected disabled>Select an option...</option>
@@ -200,9 +201,9 @@
                                 <option value="mat-4">Mat 4</option>
                             </select>
                         </div>
-                        <div class="col-md-6 additive-manufacturing-group d-none">
+                        <div class="col-md-6 d-none" id="quantity-div">
                             <label for="quantity" class="form-label">Quantity per Part</label>
-                            <input type="number" min="0" class="form-control" id="quantity">
+                            <input type="number" min="0" class="form-control" id="quantity" placeholder="0">
                         </div>
                         <div class="col-md-12">
                             <label for="additional-info" class="form-label">Additional Information</label>
