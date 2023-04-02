@@ -1,7 +1,7 @@
 # Remote-Website
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
   
-Welcome to Remote, a design, adaptive manufacturing, and prototyping company dedicated to helping businesses bring their innovative ideas to life. Our website is designed to showcase our expertise, services, and portfolio.
+Welcome to Remote, a design and rapid prototyping company dedicated to helping businesses bring their innovative ideas to life. Our website is designed to showcase our expertise, services, and portfolio.
   
   
 ## Table of Contents
