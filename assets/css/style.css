@@ -168,7 +168,7 @@ body {
 .card-text.truncate {
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3; /* adjust the number of lines as needed */
+    -webkit-line-clamp: 2; /* adjust the number of lines as needed */
     overflow: hidden;
     text-overflow: ellipsis;
   }
