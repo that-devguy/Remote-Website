@@ -140,6 +140,10 @@ body {
     margin-top: -3rem;
 }
 
+.steps-header {
+    font-weight: 800;
+}
+
 
 .btn {
     --bs-btn-color: var(--text-main);
