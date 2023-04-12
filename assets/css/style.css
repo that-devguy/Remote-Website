@@ -130,7 +130,8 @@ body {
     color: var(--text-main);
 }
 
-#about-us-section {
+#about-us-section,
+#iteration-refinement {
     padding-top: 6rem;
     margin-top: -3rem;
 }
