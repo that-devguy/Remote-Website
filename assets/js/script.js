@@ -27,7 +27,7 @@ selectService.addEventListener('change', function() {
         designNeedsDiv.classList.remove("d-none");
         materialsDiv.classList.add("d-none");
         quantityDiv.classList.add("d-none");
-    } else if (selectedOption === "additive-manufacturing") {
+    } else if (selectedOption === "rapid-prototyping") {
         designNeedsDiv.classList.add("d-none");
         targetCostDiv.classList.add("d-none");
         annualVolDiv.classList.add("d-none");
