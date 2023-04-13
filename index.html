@@ -9,12 +9,12 @@
     <link href="./assets/css/style.css" rel="stylesheet">
     <!-- for testing breakpoints -->
     <!-- <link href="/assets/css/breakpoint.css" rel="stylesheet"> -->
-    <title>Remote - Design, Addaptive Manufacturing, and Prototyping</title>
+    <title>Remote - Design & Rapid Prototyping</title>
 </head>
 <body>
     <nav class="navbar sticky-top navbar-expand-md">
         <div class="container">
-            <a href="#" class="navbar-brand disabled">
+            <a href="index.html" class="navbar-brand">
                 <img src="./assets/images/remote-logo-white.png" alt="Remote">
             </a>
             <button class="navbar-toggler collapsed d-flex d-md-none flex-column justify-content-around" data-bs-toggle="collapse" data-bs-target="#nav">
@@ -25,7 +25,7 @@
             <div class="collapse navbar-collapse" id="nav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a href="#" class="nav-link">Home</a>
+                        <a href="index.html" class="nav-link">Home</a>
                     </li>
                     <li class="nav-item">
                         <a href="#about-us-section" class="nav-link">About Us</a>
@@ -135,7 +135,7 @@
             <div class="col-12 col-lg-6 align-items-start">
                 <h2 class="display-5 fw-bold 1h-1">Request a Quote</h2>
                 <div class="red-divider mb-3"></div>
-                <p class="lead mb-3">Our quoting process is designed to be easy and hassle-free. Simply send us your project details, and we'll provide you with a quote that matches your needs. Our team is always available to discuss your project requirements further and provide you with support throughout the process. Additionally, we value your intellectual property and can provide a mutual NDA to help protect your ideas. Contact us today to get started on bringing your product to life.</p>
+                <p class="lead mb-3">Our quoting process is designed to be easy and hassle-free. Simply send us your project details, and we'll provide you with a quote that matches your needs. Our team is always available to discuss your project requirements further and provide you with support throughout the process. Additionally, we value your intellectual property and can provide a mutual NDA to help protect your ideas. Contact us today to get started on bringing your idea to life.</p>
             </div>
                 <div class="col-lg-6 col-11 py-3 px-0 p-md-3 mx-auto">
                     <form id="quote-form" onsubmit="sendQuote; reset; return false;">
@@ -160,24 +160,23 @@
                             <label for="select-services" class="form-label">Select Services *</label>
                             <select class="form-select" id="select-services" required>
                                 <option selected disabled>Select an option...</option>
-                                <option value="design-needs">Design Needs</option>
+                                <option value="design-needs">Design</option>
                                 <option value="rapid-prototyping">Rapid Prototyping</option>
-                                <option value="both">Design Needs & Rapid Prototyping</option>
+                                <option value="both">Design & Rapid Prototyping</option>
                             </select>
                         </div>
                         <div class="col-md-12 d-none" id="design-needs-group">
                             <label for="degree-of-development" class="form-label">Degree of Development</label>
                             <select class="form-select" id="degree-of-development">
                                 <option selected disabled>Select an option...</option>
-                                <option value="concept">Concept</option>
-                                <option value="prototype">Prototype</option>
-                                <option value="ideation">Ideation</option>
-                                <option value="production-ready">Production Ready</option>
+                                <option value="conceptual">Conceptual</option>
+                                <option value="detailed">Detailed</option>
+                                <option value="final">Final</option>
                             </select>
                         </div>
                         <div class="col-md-6 d-none" id="target-cost-div">
                             <label for="target-cost" class="form-label">Target Cost</label>
-                            <input type="text" class="form-control" id="target-cost" placeholder="0">
+                            <input type="text" class="form-control" id="target-cost" placeholder="$0">
                         </div>
                         <div class="col-md-6 d-none" id="annual-vol-div">
                             <label for="estimated-annual-volume" class="form-label">Estimated Annual Volume</label>

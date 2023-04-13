@@ -34,7 +34,7 @@ selectService.addEventListener('change', function() {
         launchDiv.classList.add("d-none");
         materialsDiv.classList.remove("d-none");
         quantityDiv.classList.remove("d-none");
-    } else if ( selectedOption === "both") {
+    } else if (selectedOption === "both") {
         designNeedsDiv.classList.remove("d-none");
         materialsDiv.classList.remove("d-none");
         quantityDiv.classList.remove("d-none");
@@ -55,7 +55,11 @@ degreeDevelopment.addEventListener('change', function() {
 
     
     let selectedOption = this.value;
-    if (selectedOption === "production-ready") {
+    if (selectedOption === "detailed") {
+        targetCostDiv.classList.remove("d-none");
+        annualVolDiv.classList.remove("d-none");
+        launchDiv.classList.add("d-none");
+    } else if (selectedOption === "final") {
         targetCostDiv.classList.remove("d-none");
         annualVolDiv.classList.remove("d-none");
         launchDiv.classList.remove("d-none");
@@ -73,6 +77,14 @@ degreeDevelopment.addEventListener('change', function() {
     quantityPerPart.value = "";
 
 })
+
+targetCost.addEventListener('input', function() {
+    if (this.value.length === 0) {
+      this.value = '$';
+    } else if (this.value.charAt(0) !== '$') {
+      this.value = '$' + this.value;
+    }
+});
 
 function sendQuote() {
     Email.send({
