@@ -125,6 +125,19 @@
     background: var(--text-secondary);
 }
 
+#bg-image {
+    background-image: linear-gradient(to bottom, transparent, var(--bg-main)), url('../images/main-header.jpg');
+    background-size: cover;
+}
+
+.text-shadow {
+    text-shadow:3px 3px 3px rgba(0, 0, 0, .8)
+}
+
+#hero-text {
+    text-shadow:3px 3px 10px rgba(0, 0, 0, .8)
+}
+
 body {
     background-color: var(--bg-main);
     color: var(--text-main);
@@ -144,7 +157,6 @@ body {
 .steps-header {
     font-weight: 800;
 }
-
 
 .btn {
     --bs-btn-color: var(--text-main);
