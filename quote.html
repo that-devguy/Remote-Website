@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./assets/css/reset.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="./assets/css/style.css" rel="stylesheet">
+    <!-- for testing breakpoints -->
+    <!-- <link href="/assets/css/breakpoint.css" rel="stylesheet"> -->
+    <title>Remote - Design & Rapid Prototyping</title>
+</head>
+<body>
+    <nav class="navbar sticky-top navbar-expand-md">
+        <div class="container">
+            <a href="index.html" class="navbar-brand">
+                <img src="./assets/images/remote-logo-white.png" alt="Remote">
+            </a>
+            <button class="navbar-toggler collapsed d-flex d-md-none flex-column justify-content-around" data-bs-toggle="collapse" data-bs-target="#nav">
+                <span class="toggler-icon top-bar"></span>
+                <span class="toggler-icon middle-bar"></span>
+                <span class="toggler-icon bottom-bar"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="nav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html#about-us-section" class="nav-link">About Us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="design.html" class="dropdown-item">Design</a></li>
+                            <li><a href="prototyping.html" class="dropdown-item">Rapid Prototyping</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="quote.html" class="nav-link"><button id="request-quote">Request Quote</button></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container col-xxl-8 px-4 pb-5">
+        <!-- request quote -->
+            <div id="request-quote-section" class="row align-items-md-start g5">
+                <div class="col-12 col-lg-6 align-items-start">
+                    <h2 class="display-5 fw-bold 1h-1">Request a Quote</h2>
+                    <div class="red-divider mb-3"></div>
+                    <p class="lead mb-3">Our quoting process is designed to be easy and hassle-free. Simply send us your project details, and we'll provide you with a quote that matches your needs. Our team is always available to discuss your project requirements further and provide you with support throughout the process. Additionally, we value your intellectual property and can provide a mutual NDA to help protect your ideas. Contact us today to get started on bringing your idea to life.</p>
+                </div>
+                    <div class="col-lg-6 col-11 py-3 px-0 p-md-3 mx-auto">
+                        <form id="quote-form" onsubmit="sendQuote; reset; return false;">
+                        <div id="form-container" class="row g-3 px-3 mt-2">
+                            <div class="col-md-6">
+                                <label for="full-name" class="form-label">Full Name *</label>
+                                <input type="text" class="form-control" id="full-name" placeholder="John Doe" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="email" class="form-label">Email Address *</label>
+                                <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="phone" class="form-label">Phone Number *</label>
+                                <input type="tel" class="form-control" id="phone" placeholder="(123) 456-7890" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="company" class="form-label">Company</label>
+                                <input type="text" class="form-control" id="company" placeholder="Acme Inc.">
+                            </div>
+                            <div class="col-md-12">
+                                <label for="select-services" class="form-label">Select Services *</label>
+                                <select class="form-select" id="select-services" required>
+                                    <option selected disabled>Select an option...</option>
+                                    <option value="design-needs">Design</option>
+                                    <option value="rapid-prototyping">Rapid Prototyping</option>
+                                    <option value="both">Design & Rapid Prototyping</option>
+                                </select>
+                            </div>
+                            <div class="col-md-12 d-none" id="design-needs-group">
+                                <label for="degree-of-development" class="form-label">Degree of Development</label>
+                                <select class="form-select" id="degree-of-development">
+                                    <option selected disabled>Select an option...</option>
+                                    <option value="conceptual">Conceptual</option>
+                                    <option value="detailed">Detailed</option>
+                                    <option value="final">Final</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6 d-none" id="target-cost-div">
+                                <label for="target-cost" class="form-label">Target Cost</label>
+                                <input type="text" class="form-control" id="target-cost" placeholder="$0">
+                            </div>
+                            <div class="col-md-6 d-none" id="annual-vol-div">
+                                <label for="estimated-annual-volume" class="form-label">Estimated Annual Volume</label>
+                                <input type="number" min="0" class="form-control" id="estimated-annual-volume" placeholder="0">
+                            </div>
+                            <div class="col-md-6 d-none" id="launch-div">
+                                <label for="launch-date" class="form-label">Launch Date</label>
+                                <input type="date" class="form-control" id="launch-date">
+                            </div>
+                            <div class="col-md-12 d-none" id="materials-div">
+                                <label for="material" class="form-label">Material</label>
+                                <select class="form-select" id="material">
+                                    <option selected disabled>Select an option...</option>
+                                    <option value="nylon">Nylon</option>
+                                    <option value="nylonCF">Nylon (CF)</option>
+                                    <option value="polycarbonate">Polycarbonate</option>
+                                    <option value="polycarbonateCF">Polycarbonate (CF)</option>
+                                    <option value="polyurethane">Polyurethane</option>
+                                    <option value="polypropylene">Polypropylene</option>
+                                    <option value="abs">ABS</option>
+                                    <option value="absCF">ABS (CF)</option>
+                                    <option value="petg">PETG</option>
+                                    <option value="petgCF">PETG (CF)</option>
+                                    <option value="pla">PLA</option>
+                                    <option value="notSure">Not Sure</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6 d-none" id="quantity-div">
+                                <label for="quantity" class="form-label">Quantity per Part</label>
+                                <input type="number" min="0" class="form-control" id="quantity" placeholder="0">
+                            </div>
+                            <div class="col-md-12">
+                                <label for="additional-info" class="form-label">Additional Information</label>
+                                <textarea class="form-control" id="additional-info" rows="5" placeholder="For example, in need of a component to support a load of up to 350 pounds, with an overall size of no more than 6 inches...
+                                "></textarea>
+                            </div>
+                            <div class="col-md-12">
+                                <label for="file-upload" class="form-label">Project Files</label>
+                                <input type="file" min="0" class="form-control" id="file-upload">
+                            </div>
+                            <div class="col-md-12">
+                                <p id="upload-msg" class="col-11">At Remote, we understand that protecting your intellectual property is essential to the success of your invention. Therefore, we want to assure you that any files you upload are treated with the utmost confidentiality. Your ideas are safe with us, and we are committed to providing you with the highest level of privacy.</p>
+                            </div>
+                            <div class="col-md-12 mb-4 mt-0 text-center">
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+                        </div>
+                        </form>
+                    </div>
+                </div>
+        <footer>
+            <div class="col-12 col-md-8 red-divider-long"></div>
+            <div class="row mt-5 justify-content-between">
+                <div class="col-md-4">
+                    <img src="/assets/images/remote-logo-white.png" alt="Remote Logo" class="w-75">
+                    <p class="col-md-8 fst-italic">Turning ideas into reality has never been so easy.</p>
+                    <p class="col-md-8 fst-italic">Located in Cleveland, OH</p>
+                </div>
+                <div class="col-6 col-md-3 text-md-end">
+                    <p class="fst-italic">Site Map</p>
+                    <a href="index.html" class="footer-link">Home</a><br>
+                    <a href="index.html#about-us-section" class="footer-link">About Us</a><br>
+                    <a href="index.html#services" class="footer-link">Services</a><br>
+                    <a href="design.html" class="footer-link">Design</a><br>
+                    <a href="prototyping.html" class="footer-link">Rapid Prototyping</a><br>
+                    <a href="quote.html" class="footer-link">Request a Quote</a><br>
+                </div>
+                <div class="col-6 col-md-3 text-md-end">
+                    <p class="fst-italic">Legal Info</p>
+                    <a href="#" class="footer-link">Privacy Policy</a><br>
+                    <a href="#" class="footer-link">Terms & Conditions</a><br>
+                    <a href="#" class="footer-link">Cookie Policy</a><br>
+                    <a href="index.html" class="footer-link">Download NDA</a><br>
+                </div>
+            </div>
+            <div class="pt-5 text-center">
+                <p class="mx-auto fst-italic">©2021 Remote - Design & Rapid Prototyping</p>
+            </div>
+        </footer>
+    </div>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
