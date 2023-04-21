@@ -48,7 +48,7 @@ footer.innerHTML = `<div class="col-12 col-md-8 red-divider-long"></div>
     </div>
 </div>
 <div class="pt-5 text-center copy-right">
-    <p class="mx-auto mb-0"><span id="copyright">©</span>2021 Remote - Design & Rapid Prototyping</p><br>
+    <p class="mx-auto mb-0"><span id="copyright">©</span>2021 Remote Ltd - Design & Rapid Prototyping</p><br>
     <p id="devguy" class="mx-auto fst-italic">Website built & designed by that_<span class="red">dev</span>guy</p>
 </div>`
 
