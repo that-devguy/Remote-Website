@@ -53,6 +53,14 @@ footer.innerHTML = `<div class="col-12 col-md-8 red-divider-long"></div>
 </div>`
 
 
+const navbar = document.getElementById("nav");
+const menuItems = document.getElementById("about-link");
+
+menuItems.addEventListener("click", () => {
+    navbar.classList.remove("show");
+});
+
+
 // dynamically changes inputs based on selected services
 selectService.addEventListener('change', function() {
 
