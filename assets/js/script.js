@@ -23,7 +23,7 @@ let footer = document.getElementById('remote-footer');
 footer.innerHTML = `<div class="col-12 col-md-8 red-divider-long"></div>
 <div class="row mt-5 justify-content-between d-flex">
     <div class="col-md-4 d-flex flex-column justify-content-between">
-        <img src="/assets/images/remote-logo-white.png" alt="Remote Logo" class="w-75">
+        <img src="./assets/images/remote-logo-white.png" alt="Remote Logo" class="w-75">
         <div>
             <p class="fst-italic">Transforming your ideas into tangible reality through high-quality design and rapid prototyping.</p>
             <p class="fst-italic">Located in Cleveland, OH</p>
