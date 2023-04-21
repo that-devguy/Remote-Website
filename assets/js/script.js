@@ -48,7 +48,7 @@ footer.innerHTML = `<div class="col-12 col-md-8 red-divider-long"></div>
     </div>
 </div>
 <div class="pt-5 text-center copy-right">
-    <p class="mx-auto mb-0"><span id="copyright">©</span>2023 Remote Ltd - Design & Rapid Prototyping</p><br>
+    <p class="mx-auto mb-0"><span id="copyright">©</span>2021-2023 Remote Ltd - Design & Rapid Prototyping</p><br>
     <p id="devguy" class="mx-auto fst-italic">Website built & designed by that_<span class="red">dev</span>guy</p>
 </div>`
 
@@ -119,30 +119,3 @@ targetCost.addEventListener('input', function() {
       this.value = '$' + this.value;
     }
 });
-
-function sendQuote() {
-    Email.send({
-        Host : "smtp.elasticemail.com",
-        Username : "username",
-        Password : "password",
-        To : 'them@website.com',
-        From : email.value,
-        Subject : `Quote request from ${fullName.value}`,
-        Body : `Name: ${fullName.value}
-        Email: ${email.value}
-        Phone #: ${phoneNumber.value}
-        Company: ${company.value}
-        Service Needed: ${selectService.value}
-        Degree of Development: ${degreeDevelopment.value}
-        Target Cost: ${targetCost.value}
-        Estimated Annual Volume: ${estimatedAnnualVolume.value}
-        Launch Date: ${launchDate.value}
-        Material: ${material.value}
-        Quantity per Part: ${quantityPerPart.value}
-        Project Files: ${projectFiles.value}
-        Additional Information: ${additionalInformation.value}
-        `
-    }).then(
-    message => alert("Quote request successfully sent!")
-    );
-}
