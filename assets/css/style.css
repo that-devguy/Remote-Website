@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;1,400&family=Rubik:wght@700&display=swap');
+
 :root {
     --bg-main: #090A0B;
     --bg-secondary: #121417;
@@ -5,6 +7,8 @@
     --btn-hover: #b90000;
     --text-main: #F3F5F7;
     --text-secondary: #6C757D;
+    --font-body: 'Roboto Mono', monospace;
+    --font-header: 'Rubik', sans-serif;
 }
 
 .navbar {
@@ -17,6 +21,7 @@
 
 .navbar li a {
     color: var(--text-secondary);
+    font-family: var(--font-body);
     --bs-nav-link-disabled-color: var(--text-main);
     --bs-nav-link-hover-color: var(--text-main);
 }
@@ -131,16 +136,29 @@
 }
 
 .text-shadow {
-    text-shadow:3px 3px 3px rgba(0, 0, 0, .8)
+    text-shadow:2px 0px 5px rgba(0, 0, 0, 1)
 }
 
 #hero-text {
-    text-shadow:3px 3px 10px rgba(0, 0, 0, .8)
+    text-shadow:2px 0px 5px rgba(0, 0, 0, 1)
 }
 
 body {
     background-color: var(--bg-main);
     color: var(--text-main);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-header);
+    font-weight: bold;
+}
+
+p {
+    font-family: var(--font-body);
+}
+
+.lead {
+    font-size: 1.1rem;
 }
 
 #about-us-section,
@@ -154,8 +172,13 @@ body {
     margin-top: -3rem;
 }
 
+.steps-body {
+    font-size: .9rem;
+}
+
 .steps-header {
-    font-weight: 800;
+    font-size: 1.2rem;
+    font-family: var(--font-header)
 }
 
 .btn {
@@ -165,6 +188,7 @@ body {
     --bs-btn-hover-bg: var(--btn-hover);
     --bs-btn-active-bg: var(--btn-hover);
     border-radius: 0.367rem;
+    font-family: var(--font-body);
 }
 
 .photo {
@@ -185,10 +209,10 @@ body {
 .card-text.truncate {
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2; /* adjust the number of lines as needed */
+    -webkit-line-clamp: 3; /* adjust the number of lines as needed */
     overflow: hidden;
     text-overflow: ellipsis;
-  }
+}
 
 #form-container {
     background-color: var(--bg-secondary);
@@ -226,11 +250,25 @@ footer p {
 .footer-link {
     color: var(--text-secondary);
     text-decoration: none;
+    font-family: var(--font-body);
 }
 
 .footer-link:hover {
     color: var(--text-main);
     text-decoration: none;
+}
+
+#devguy {
+    font-size: .7rem;
+    margin-top: -1.5rem;
+}
+
+.red {
+    color: var(--primary);
+}
+
+#copyright {
+    font-family: 'Arial';
 }
 
 /* styles for only medium screen sizes */
@@ -256,4 +294,7 @@ footer p {
         margin-left: 0.5rem;
     }
 
+    .copy-right {
+        font-size: .8rem;
+    }
 }

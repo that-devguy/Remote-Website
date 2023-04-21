@@ -17,6 +17,40 @@ let material = document.getElementById('material');
 let quantityPerPart = document.getElementById('quantity-per-part');
 let projectFiles = document.getElementById('file-upload');
 let additionalInformation = document.getElementById('additional-info');
+let footer = document.getElementById('remote-footer');
+
+// adds the footer to the bottom of the page
+footer.innerHTML = `<div class="col-12 col-md-8 red-divider-long"></div>
+<div class="row mt-5 justify-content-between d-flex">
+    <div class="col-md-4 d-flex flex-column justify-content-between">
+        <img src="/assets/images/remote-logo-white.png" alt="Remote Logo" class="w-75">
+        <div>
+            <p class="fst-italic">Transforming your ideas into tangible reality through high-quality design and rapid prototyping.</p>
+            <p class="fst-italic">Located in Cleveland, OH</p>
+        </div>
+    </div>
+    <div class="col-6 col-md-3 text-md-end d-flex flex-column justify-content-between">
+        <p class="fst-italic">Site Map</p>
+        <div>
+            <a href="index.html" class="footer-link">Home</a><br>
+            <a href="design.html" class="footer-link">Design</a><br>
+            <a href="prototyping.html" class="footer-link">Rapid Prototyping</a><br>
+            <a href="quote.html" class="footer-link">Request a Quote</a><br></div>
+    </div>
+    <div class="col-6 col-md-3 text-md-end d-flex flex-column justify-content-between">
+        <p class="fst-italic">Legal Info</p>
+        <div> 
+            <a href="#" class="footer-link">Privacy Policy</a><br>
+            <a href="#" class="footer-link">Terms & Conditions</a><br>
+            <a href="#" class="footer-link">Cookie Policy</a><br>
+            <a href="index.html" class="footer-link">Mutual NDA</a><br>
+        </div>
+    </div>
+</div>
+<div class="pt-5 text-center copy-right">
+    <p class="mx-auto mb-0"><span id="copyright">©</span>2021 Remote - Design & Rapid Prototyping</p><br>
+    <p id="devguy" class="mx-auto fst-italic">Website built & designed by that_<span class="red">dev</span>guy</p>
+</div>`
 
 
 // dynamically changes inputs based on selected services

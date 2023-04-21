@@ -53,7 +53,7 @@
                     <p class="lead mb-3">Our quoting process is designed to be easy and hassle-free. Simply send us your project details, and we'll provide you with a quote that matches your needs. Our team is always available to discuss your project requirements further and provide you with support throughout the process. Additionally, we value your intellectual property and can provide a mutual NDA to help protect your ideas. Contact us today to get started on bringing your idea to life.</p>
                 </div>
                     <div class="col-lg-6 col-11 py-3 px-0 p-md-3 mx-auto">
-                        <form id="quote-form" onsubmit="sendQuote; reset; return false;">
+                        <form id="quote-form" action="https://formsubmit.co/tim.vidoni@remotedesign.tech " method="POST">
                         <div id="form-container" class="row g-3 px-3 mt-2">
                             <div class="col-md-6">
                                 <label for="full-name" class="form-label">Full Name *</label>
@@ -139,40 +139,15 @@
                                 <button type="submit" class="btn btn-primary">Submit</button>
                             </div>
                         </div>
+                        <input type="hidden" name="_subject" value="New submission!" id="email-subject">
+                        <input type="hidden" name="_next" value="thanks.html">
                         </form>
                     </div>
                 </div>
-        <footer>
-            <div class="col-12 col-md-8 red-divider-long"></div>
-            <div class="row mt-5 justify-content-between">
-                <div class="col-md-4">
-                    <img src="/assets/images/remote-logo-white.png" alt="Remote Logo" class="w-75">
-                    <p class="col-md-8 fst-italic">Turning ideas into reality has never been so easy.</p>
-                    <p class="col-md-8 fst-italic">Located in Cleveland, OH</p>
-                </div>
-                <div class="col-6 col-md-3 text-md-end">
-                    <p class="fst-italic">Site Map</p>
-                    <a href="index.html" class="footer-link">Home</a><br>
-                    <a href="index.html#about-us-section" class="footer-link">About Us</a><br>
-                    <a href="index.html#services" class="footer-link">Services</a><br>
-                    <a href="design.html" class="footer-link">Design</a><br>
-                    <a href="prototyping.html" class="footer-link">Rapid Prototyping</a><br>
-                    <a href="quote.html" class="footer-link">Request a Quote</a><br>
-                </div>
-                <div class="col-6 col-md-3 text-md-end">
-                    <p class="fst-italic">Legal Info</p>
-                    <a href="#" class="footer-link">Privacy Policy</a><br>
-                    <a href="#" class="footer-link">Terms & Conditions</a><br>
-                    <a href="#" class="footer-link">Cookie Policy</a><br>
-                    <a href="index.html" class="footer-link">Download NDA</a><br>
-                </div>
-            </div>
-            <div class="pt-5 text-center">
-                <p class="mx-auto fst-italic">©2021 Remote - Design & Rapid Prototyping</p>
-            </div>
-        </footer>
+        <footer id="remote-footer">
+            <!-- js innerHTML footer -->
+        </footer> 
     </div>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <script src="./assets/js/script.js"></script>
 </body>
