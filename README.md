@@ -14,7 +14,10 @@ Welcome to Remote, a design and rapid prototyping company dedicated to helping b
 
 ## Technologies Used
 
-HTML5, CSS, JavaScript
+[![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-yellow)](https://www.ecma-international.org/ecma-262/)
+[![CSS](https://img.shields.io/badge/CSS3-blue)](https://www.w3.org/TR/CSS/)
+[![HTML](https://img.shields.io/badge/HTML5-orange)](https://html.spec.whatwg.org/)
+
   
 ## Usage
   
@@ -23,7 +26,7 @@ N/A
 
 ## Project Links
   
-Walkthrough Demo:
+Deployed Application: www.remotedesign.tech/
 
 Github Repository: https://github.com/that-devguy/Remote-Website
 
