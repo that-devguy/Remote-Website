@@ -40,9 +40,9 @@ footer.innerHTML = `<div class="col-12 col-md-8 red-divider-long"></div>
     <div class="col-6 col-md-3 text-md-end d-flex flex-column justify-content-between">
         <p class="fst-italic">Legal Info</p>
         <div> 
-            <a href="#" class="footer-link">Privacy Policy</a><br>
-            <a href="#" class="footer-link">Terms & Conditions</a><br>
-            <a href="#" class="footer-link">Cookie Policy</a><br>
+            <a href="privacy-policy.html" class="footer-link">Privacy Policy</a><br>
+            <a href="terms&conditions.html" class="footer-link">Terms & Conditions</a><br>
+            <a href="cookies-policy.html" class="footer-link">Cookie Policy</a><br>
             <a href="index.html" class="footer-link">Mutual NDA</a><br>
         </div>
     </div>
