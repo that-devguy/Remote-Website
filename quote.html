@@ -57,23 +57,23 @@
                         <div id="form-container" class="row g-3 px-3 mt-2">
                             <div class="col-md-6">
                                 <label for="full-name" class="form-label">Full Name *</label>
-                                <input type="text" class="form-control" id="full-name" placeholder="John Doe" required>
+                                <input type="text" name="name" class="form-control" id="full-name" placeholder="John Doe" required>
                             </div>
                             <div class="col-md-6">
                                 <label for="email" class="form-label">Email Address *</label>
-                                <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
+                                <input type="email" name="email" class="form-control" id="email" placeholder="name@example.com" required>
                             </div>
                             <div class="col-md-6">
                                 <label for="phone" class="form-label">Phone Number *</label>
-                                <input type="tel" class="form-control" id="phone" placeholder="(123) 456-7890" required>
+                                <input type="tel" name="phone" class="form-control" id="phone" placeholder="(123) 456-7890" required>
                             </div>
                             <div class="col-md-6">
                                 <label for="company" class="form-label">Company</label>
-                                <input type="text" class="form-control" id="company" placeholder="Acme Inc.">
+                                <input type="text" name="company" class="form-control" id="company" placeholder="Acme Inc.">
                             </div>
                             <div class="col-md-12">
                                 <label for="select-services" class="form-label">Select Services *</label>
-                                <select class="form-select" id="select-services" required>
+                                <select class="form-select" name="selected-service" id="select-services" required>
                                     <option selected disabled>Select an option...</option>
                                     <option value="design-needs">Design</option>
                                     <option value="rapid-prototyping">Rapid Prototyping</option>
@@ -82,7 +82,7 @@
                             </div>
                             <div class="col-md-12 d-none" id="design-needs-group">
                                 <label for="degree-of-development" class="form-label">Degree of Development</label>
-                                <select class="form-select" id="degree-of-development">
+                                <select class="form-select" name="degree-of-development" id="degree-of-development">
                                     <option selected disabled>Select an option...</option>
                                     <option value="conceptual">Conceptual</option>
                                     <option value="detailed">Detailed</option>
@@ -91,19 +91,19 @@
                             </div>
                             <div class="col-md-6 d-none" id="target-cost-div">
                                 <label for="target-cost" class="form-label">Target Cost</label>
-                                <input type="text" class="form-control" id="target-cost" placeholder="$0">
+                                <input type="text" name="target-cost" class="form-control" id="target-cost" placeholder="$0">
                             </div>
                             <div class="col-md-6 d-none" id="annual-vol-div">
                                 <label for="estimated-annual-volume" class="form-label">Estimated Annual Volume</label>
-                                <input type="number" min="0" class="form-control" id="estimated-annual-volume" placeholder="0">
+                                <input type="number" name="estimated-annual-volume" min="0" class="form-control" id="estimated-annual-volume" placeholder="0">
                             </div>
                             <div class="col-md-6 d-none" id="launch-div">
                                 <label for="launch-date" class="form-label">Launch Date</label>
-                                <input type="date" class="form-control" id="launch-date">
+                                <input type="date" name="launch-date" class="form-control" id="launch-date">
                             </div>
                             <div class="col-md-12 d-none" id="materials-div">
                                 <label for="material" class="form-label">Material</label>
-                                <select class="form-select" id="material">
+                                <select class="form-select" name="material" id="material">
                                     <option selected disabled>Select an option...</option>
                                     <option value="nylon">Nylon</option>
                                     <option value="nylonCF">Nylon (CF)</option>
@@ -121,16 +121,16 @@
                             </div>
                             <div class="col-md-6 d-none" id="quantity-div">
                                 <label for="quantity" class="form-label">Quantity per Part</label>
-                                <input type="number" min="0" class="form-control" id="quantity" placeholder="0">
+                                <input type="number" name="quantity-per-part" min="0" class="form-control" id="quantity" placeholder="0">
                             </div>
                             <div class="col-md-12">
                                 <label for="additional-info" class="form-label">Additional Information</label>
-                                <textarea class="form-control" id="additional-info" rows="5" placeholder="For example, in need of a component to support a load of up to 350 pounds, with an overall size of no more than 6 inches...
+                                <textarea class="form-control" name="additional-info" id="additional-info" rows="5" placeholder="For example, in need of a component to support a load of up to 350 pounds, with an overall size of no more than 6 inches...
                                 "></textarea>
                             </div>
                             <div class="col-md-12">
                                 <label for="file-upload" class="form-label">Project Files</label>
-                                <input type="file" min="0" class="form-control" id="file-upload">
+                                <input type="file" name="project-files" min="0" class="form-control" id="file-upload">
                             </div>
                             <div class="col-md-12">
                                 <p id="upload-msg" class="col-11">At Remote, we understand that protecting your intellectual property is essential to the success of your invention. Therefore, we want to assure you that any files you upload are treated with the utmost confidentiality. Your ideas are safe with us, and we are committed to providing you with the highest level of privacy.</p>
