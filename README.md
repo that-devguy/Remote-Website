@@ -21,8 +21,7 @@ Welcome to Remote, a design and rapid prototyping company dedicated to helping b
   
 ## Usage
   
-To use this project, follow these steps:
-N/A
+![Remote - Design & Rapid Prototyping Home Page Demo](/assets/images/home-page-demo.JPG)
 
 ## Project Links
   
