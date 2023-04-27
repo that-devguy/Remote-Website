@@ -43,7 +43,7 @@ footer.innerHTML = `<div class="col-12 col-md-8 red-divider-long"></div>
             <a href="privacy-policy.html" class="footer-link">Privacy Policy</a><br>
             <a href="terms&conditions.html" class="footer-link">Terms & Conditions</a><br>
             <a href="cookies-policy.html" class="footer-link">Cookie Policy</a><br>
-            <a href="index.html" class="footer-link">Mutual NDA</a><br>
+            <a href="./assets/Remote_Customer_Mutual_NDA.pdf" class="footer-link" download>Download Mutual NDA</a><br>
         </div>
     </div>
 </div>
