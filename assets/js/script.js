@@ -113,6 +113,76 @@ degreeDevelopment.addEventListener("change", function () {
   quantityPerPart.value = "";
 });
 
+let fileList = document.getElementById("file-list");
+let projectFilesStore = new DataTransfer();
+
+projectFiles.addEventListener("change", function () {
+  for (const file of this.files) {
+    const isDuplicate = Array.from(projectFilesStore.files).some(
+      (f) =>
+        f.name === file.name &&
+        f.size === file.size &&
+        f.lastModified === file.lastModified
+    );
+    if (!isDuplicate) {
+      projectFilesStore.items.add(file);
+    }
+  }
+  projectFiles.files = projectFilesStore.files;
+  renderFileList();
+});
+
+function renderFileList() {
+  fileList.innerHTML = "";
+  Array.from(projectFilesStore.files).forEach((file, index) => {
+    const li = document.createElement("li");
+    li.className = "d-flex align-items-center justify-content-between mt-1";
+
+    const name = document.createElement("span");
+    name.textContent = file.name;
+    name.className = "text-truncate me-2";
+
+    const removeBtn = document.createElement("button");
+    removeBtn.type = "button";
+    removeBtn.className = "btn-close btn-close-white";
+    removeBtn.setAttribute("aria-label", "Remove " + file.name);
+    removeBtn.addEventListener("click", () => removeFile(index));
+
+    li.appendChild(name);
+    li.appendChild(removeBtn);
+    fileList.appendChild(li);
+  });
+}
+
+function removeFile(index) {
+  const next = new DataTransfer();
+  Array.from(projectFilesStore.files).forEach((file, i) => {
+    if (i !== index) next.items.add(file);
+  });
+  projectFilesStore = next;
+  projectFiles.files = projectFilesStore.files;
+  renderFileList();
+}
+
+phoneNumber.addEventListener("input", function () {
+  const digits = this.value.replace(/\D/g, "").slice(0, 10);
+  if (digits.length === 0) {
+    this.value = "";
+  } else if (digits.length <= 3) {
+    this.value = "(" + digits;
+  } else if (digits.length <= 6) {
+    this.value = "(" + digits.slice(0, 3) + ") " + digits.slice(3);
+  } else {
+    this.value =
+      "(" +
+      digits.slice(0, 3) +
+      ") " +
+      digits.slice(3, 6) +
+      "-" +
+      digits.slice(6);
+  }
+});
+
 targetCost.addEventListener("input", function () {
   if (this.value.length === 0) {
     this.value = "$";
